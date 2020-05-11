@@ -53,6 +53,60 @@ const deleteTodo = id => {
   };
 };
 
+//reducer
+const todoreducer = (state = [], action) => {
+  switch (action.type) {
+    case ADD_TODO:
+      const allTodos = [
+        ...state,
+        {
+          text: action.text,
+          isCheck: action.isCheck,
+          Id: action.Id,
+          isVisible: action.isVisible
+        }
+      ];
+      const filterVisible = allTodos.map(item => {
+        return { ...item, isVisible: true };
+      });
+      return filterVisible;
+    case TOGGLE_TODO:
+      return state.map(item => {
+        return item.Id === action.Id
+          ? { ...item, isCheck: !item.isCheck }
+          : item;
+      });
+    case SHOW_ACTIVE:
+      const active = state.map(item => {
+        return item.isCheck
+          ? { ...item, isVisible: false }
+          : { ...item, isVisible: true };
+      });
+      return active;
+    case SHOW_COMPLETED:
+      const completedTodos = state.map(item => {
+        return !item.isCheck
+          ? { ...item, isVisible: false }
+          : { ...item, isVisible: true };
+      });
+      return completedTodos;
+
+    case SHOW_ALL:
+      const allList = state.map(item => {
+        return { ...item, isVisible: true };
+      });
+      return allList;
+
+    case DELETE_TODO:
+      return state.filter(item => item.Id !== action.Id);
+
+    default:
+      return state;
+  }
+};
+
+const allReducers = combineReducers({ todoreducer });
+
 //presentational components
 let nextTodoId = 0;
 class Todo extends React.Component {
