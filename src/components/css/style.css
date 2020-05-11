@@ -78,3 +78,42 @@ body {
   font-weight: 500;
   outline: none;
 }
+.line-through {
+  text-decoration: line-through;
+}
+.list-item.inactive {
+  display: none;
+}
+.filterContainer {
+  display: block;
+  text-align: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.filterLabel {
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 8px;
+  color: #24c0ab;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.filter-input {
+  margin-left: 10px;
+  margin-right: 0;
+  cursor: pointer;
+}
+.filter-input:disabled,
+.filter-input:disabled + .filter-label {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.delete-btn {
+  color: #24c0ab;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.list-label {
+  cursor: pointer;
+}
