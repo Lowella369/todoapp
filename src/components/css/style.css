@@ -117,3 +117,6 @@ body {
 .list-label {
   cursor: pointer;
 }
+.about {
+  padding-top: 5rem;
+}
