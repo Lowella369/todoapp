@@ -284,3 +284,9 @@ class Todo extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    todos: state.todoreducer
+  };
+};
