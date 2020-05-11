@@ -19,7 +19,6 @@ const App = () => {
           <Redirect exact path="/" to="/about" />
           <Route path="/about" component={About} />
           <Route path="/todos" component={Todo} />
-          <Route path="/contact" component={null} />
           <Route component={Error} />
         </Switch>
       </div>
