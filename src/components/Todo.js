@@ -290,3 +290,16 @@ const mapStateToProps = state => {
     todos: state.todoreducer
   };
 };
+
+const TodoApp = connect(mapStateToProps)(Todo);
+const store = createStore(allReducers);
+
+const Display = () => {
+  return (
+    <Provider store={store}>
+      <TodoApp />
+    </Provider>
+  );
+};
+
+export default Display;
