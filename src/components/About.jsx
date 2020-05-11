@@ -3,7 +3,8 @@ import React from "react";
 const About = () => {
   return (
     <div className="about">
-      This is a simple to do list web application that allow the user to...
+      A simple React Redux app that allows user to add, delete and mark a todo
+      list complete.
     </div>
   );
 };
