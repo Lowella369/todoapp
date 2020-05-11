@@ -1,0 +1,21 @@
+html,
+body {
+  color: hsl(0, 0%, 55%);
+}
+.navBar {
+  padding-top: 5rem;
+  text-align: center;
+  background: #0aa792;
+}
+.todoContainer {
+  display: flex;
+}
+.todoApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  max-width: 40rem;
+  margin: auto;
+}
