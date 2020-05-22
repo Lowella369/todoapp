@@ -179,7 +179,7 @@ class Todo extends React.Component {
     const visibleElements = todos.filter(item => item.isVisible);
     return (
       <React.Fragment>
-        <h1 className="heading">Todo App</h1>
+        <h1 className="heading">Enter a todo list</h1>
         <div className="todoApp">
           <div className="todoContainer">
             <div className="inputFields">
