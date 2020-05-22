@@ -1,6 +1,5 @@
 import React from "react";
-
-import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
+import { HashRouter, Switch, Redirect, Route } from "react-router-dom";
 import "./styles.css";
 import NavBar from "./components/NavBar.jsx";
 import About from "./components/About.jsx";
@@ -10,7 +9,7 @@ import Contact from "./components/Contact.jsx";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <NavBar />
         <Switch>
@@ -24,7 +23,7 @@ const App = () => {
           <p>Copyright Lowella 2020</p>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
