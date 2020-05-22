@@ -14,7 +14,7 @@ const App = () => {
         <NavBar />
         <Switch>
           <Redirect exact path="/" to="/about" />
-          <Route path="/about" component={About} />
+          <Route path="/about" exact component={About} />
           <Route path="/todos" component={Todo} />
           <Route path="/contact" component={Contact} />
           <Route component={Error} />
