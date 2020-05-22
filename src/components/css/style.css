@@ -3,9 +3,15 @@ body {
   color: #999797;
 }
 .navBar {
-  padding-top: 5rem;
+  padding-top: 2rem;
   text-align: center;
   background: #0aa792;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 0.5rem;
 }
 .todoContainer {
   display: flex;
