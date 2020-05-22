@@ -8,6 +8,7 @@ const NavBar = () => {
     <div className="navBar">
       <NavTab to="/about" label="About" />
       <NavTab to="/todos" label="Todos" />
+      <NavTab to="/contact" label="Contact" />
     </div>
   );
 };
