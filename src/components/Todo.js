@@ -2,7 +2,6 @@ import React from "react";
 import { createStore } from "redux";
 import { Provider, connect } from "react-redux";
 import { combineReducers } from "redux";
-
 import "./Message.jsx";
 
 const ADD_TODO = "ADD_TODO";
