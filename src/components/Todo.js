@@ -129,23 +129,7 @@ class Todo extends React.Component {
 
   handleKeyUp = (value, e) => {
     if (e.key === "Enter") {
-      //validating input
-      if (
-        this.props.todos.find(
-          text => this.props.todos.text === this.state.value
-        )
-      ) {
-        errorMessage = "Todo list already exists!";
-      } else {
-        //this.state.value.trim() -> this is the current input value
-        this.state.value.trim().length && this.props.dispatch(addTodo(value));
-      }
-      //end
-      //to check the todos in the array
-      console.log(this.props.todos);
-      this.setState({
-        value: ""
-      });
+      this.handleSubmit();
     }
   };
 
@@ -230,6 +214,7 @@ class Todo extends React.Component {
               Submit
             </button>
           </div>
+          <p className="errorMsg"> {errorMessage}</p>
           <p> {errorMessage}</p>
           {visibleElements.length > 0 && (
             <ul className="list">
