@@ -1,11 +1,8 @@
 import React from "react";
 
 import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
-
 import "./styles.css";
-
 import NavBar from "./components/NavBar.jsx";
-
 import About from "./components/About.jsx";
 import Error from "./components/Error.jsx";
 import Todo from "./components/Todo.js";
