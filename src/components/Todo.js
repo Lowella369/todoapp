@@ -230,7 +230,7 @@ class Todo extends React.Component {
               Submit
             </button>
           </div>
-          <p> {errorMessage}</p>
+          <p className="errorMsg"> {errorMessage}</p>
           {visibleElements.length > 0 && (
             <ul className="list">
               {todos.map((item, index) => {
