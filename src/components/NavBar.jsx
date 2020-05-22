@@ -5,7 +5,7 @@ import "./css/style.css";
 const NavBar = () => {
   return (
     <div className="navBar">
-      <div className="logo">Todo List App </div>
+      <div className="logo">Todo App </div>
       <NavTab to="/about" label="About" />
       <NavTab to="/todos" label="Todos" />
       <NavTab to="/contact" label="Contact" />
