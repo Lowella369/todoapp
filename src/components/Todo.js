@@ -135,19 +135,14 @@ class Todo extends React.Component {
 
   handleSubmit = () => {
     const textValue = this.state.value;
-    //console.log("submit called", textValue, this.props);
     if (this.props.todos.find(todoItem => todoItem.text === textValue)) {
       errorMessage = "Todo list already exists!";
     } else {
-      //this.state.value.trim() -> this is the current input value
-      //textValue.trim().length && this.props.dispatch(addTodo(textValue));
-
       if (textValue.trim().length > 0) {
         this.props.dispatch(addTodo(textValue));
       }
       errorMessage = "";
     }
-
     this.setState({
       value: ""
     });
@@ -253,7 +248,6 @@ class Todo extends React.Component {
           ) : (
             ""
           )}
-
           <div className="filterContainer">
             Show:
             <input
