@@ -4,7 +4,6 @@ function Contact() {
   return (
     <div className="contact-container">
       <h1>Contact</h1>
-
       <div className="contact">
         <form action="https://formspree.io/email@domain.tld" method="POST">
           <input
@@ -14,7 +13,6 @@ function Contact() {
             placeholder="First Name"
             required
           />
-
           <input
             type="text"
             name="lname"
@@ -22,7 +20,6 @@ function Contact() {
             placeholder="Last Name"
             required
           />
-
           <input
             type="email"
             name="email"
@@ -30,14 +27,12 @@ function Contact() {
             placeholder="email"
             required
           />
-
           <textarea
             name="message"
             id="message"
             placeholder="message"
             required
           />
-
           <input type="submit" name="send" id="submit" value="send" />
         </form>
       </div>
