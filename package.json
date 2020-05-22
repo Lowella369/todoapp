@@ -2,6 +2,7 @@
   "name": "react",
   "version": "1.0.0",
   "description": "React example Todo list project",
+  "homepage": "https://lowella369.github.io/todoapp/",
   "keywords": [
     "react",
     "starter"
@@ -17,13 +18,15 @@
     "redux": "4.0.5"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "typescript": "3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": [
     ">0.2%",
