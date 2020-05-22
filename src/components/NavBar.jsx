@@ -1,6 +1,5 @@
 import React from "react";
 import NavTab from "./NavTab.jsx";
-
 import "./css/style.css";
 
 const NavBar = () => {
