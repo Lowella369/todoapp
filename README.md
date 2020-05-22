@@ -19,7 +19,7 @@
     I want an app where I can write down all the chores,
     So that I know what chores needs to be done.
 
-2. As a student
+2. As a student,
    I want an app where I can have a checklist of all of my school works/assignments,
    So that I will be able to remember my schoo works/assignments.
 
