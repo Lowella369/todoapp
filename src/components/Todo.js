@@ -3,6 +3,8 @@ import { createStore } from "redux";
 import { Provider, connect } from "react-redux";
 import { combineReducers } from "redux";
 
+import "./Message.jsx";
+
 const ADD_TODO = "ADD_TODO";
 const TOGGLE_TODO = "TOGGLE_TODO";
 const SHOW_ALL = "SHOW_ALL";
@@ -109,6 +111,7 @@ const allReducers = combineReducers({ todoreducer });
 
 //presentational components
 let nextTodoId = 0;
+let errorMessage;
 class Todo extends React.Component {
   constructor(props) {
     super(props);
@@ -126,17 +129,40 @@ class Todo extends React.Component {
 
   handleKeyUp = (value, e) => {
     if (e.key === "Enter") {
-      //this.state.value.trim() -> this is the current input value
-      this.state.value.trim().length && this.props.dispatch(addTodo(value));
-
+      //validating input
+      if (
+        this.props.todos.find(
+          text => this.props.todos.text === this.state.value
+        )
+      ) {
+        errorMessage = "Todo list already exists!";
+      } else {
+        //this.state.value.trim() -> this is the current input value
+        this.state.value.trim().length && this.props.dispatch(addTodo(value));
+      }
+      //end
+      //to check the todos in the array
+      console.log(this.props.todos);
       this.setState({
         value: ""
       });
     }
   };
 
-  handleSubmit = value => {
-    this.state.value.trim().length && this.props.dispatch(addTodo(value));
+  handleSubmit = () => {
+    const textValue = this.state.value;
+    //console.log("submit called", textValue, this.props);
+    if (this.props.todos.find(todoItem => todoItem.text === textValue)) {
+      errorMessage = "Todo list already exists!";
+    } else {
+      //this.state.value.trim() -> this is the current input value
+      //textValue.trim().length && this.props.dispatch(addTodo(textValue));
+
+      if (textValue.trim().length > 0) {
+        this.props.dispatch(addTodo(textValue));
+      }
+      errorMessage = "";
+    }
 
     this.setState({
       value: ""
@@ -175,7 +201,7 @@ class Todo extends React.Component {
     const visibleElements = todos.filter(item => item.isVisible);
     return (
       <React.Fragment>
-        <h1>Todo App</h1>
+        <h1 className="heading">Todo App</h1>
         <div className="todoApp">
           <div className="todoContainer">
             <div className="inputFields">
@@ -204,6 +230,7 @@ class Todo extends React.Component {
               Submit
             </button>
           </div>
+          <p> {errorMessage}</p>
           {visibleElements.length > 0 && (
             <ul className="list">
               {todos.map((item, index) => {
@@ -252,6 +279,7 @@ class Todo extends React.Component {
               className="filter-input"
               onClick={this.showAll}
               disabled={todos.length === 0}
+              defaultChecked
             />
             <label htmlFor="allFilter" className="filterLabel">
               All
