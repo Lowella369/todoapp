@@ -231,6 +231,7 @@ class Todo extends React.Component {
             </button>
           </div>
           <p className="errorMsg"> {errorMessage}</p>
+          <p> {errorMessage}</p>
           {visibleElements.length > 0 && (
             <ul className="list">
               {todos.map((item, index) => {
