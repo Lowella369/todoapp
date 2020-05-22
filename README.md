@@ -2,10 +2,9 @@
 
 **Name: Lowella Fox**
 
-**Description:** A simple React app that that allows users to add a new item to the list. Removed or delete task from the list.  And also mark the task as "complete".  You can also view the all todos, incomplete or active todos and completed todos.
+**Description:** This is a simple ReactJS app that allows you to keep track and manage of all the tasks that you need to carry out.
 
-**Functionality:** This is a simple ReactJS app that allows you to keep track and manage of all the tasks that you need to carry out.
-
+**Functionality:** The todos page will let you add a new task to the list, delete a task from the list, mark the task as completed from the list, view or show all the tasks in the list, completed tasks and incomplete task. The contact page will let you contact the developer for future improvement or bugs. The about page is just a short description of the web app.
 
 **Technologies Used:** React-Redux, Router and CSS
 
@@ -13,17 +12,6 @@
 1. Need to add update feature so that users can modify the todo list.
 2. Need to have a more decent header.
 3. Need to have a more decent footer.
-
-
-**Designing Actions:**
-
-1. Add a new task to the list
-2. Delete a task from the list
-3. Mark the task as completed from the list
-4. View or show 
-      4a. all the tasks in the list
-      4b. completed tasks
-      4c. incomplete task
 
 
 **User Stories:**
